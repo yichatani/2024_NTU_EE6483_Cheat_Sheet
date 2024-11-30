@@ -10,5 +10,5 @@ This cheat sheet is valid only when EE6483's exam is Restricted Open Book.
 
 The cheat sheet may have some mistakes, so check carefully when you use it. I apreciate it if you find some errors and edit and commit them in [main.tex](./main.tex).
 
-__If you find it useful, give me a star, I will be very grateful.__
+__If you find it useful, a star will be fine.__
 
