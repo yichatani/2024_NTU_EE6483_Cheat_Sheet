@@ -1,0 +1,190 @@
+% Encoding Settings
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+
+% Font Settings
+\usepackage{times}
+
+% Define a new font called Tinyb. This font can maintain its shape even in very small fontsize:
+% \usepackage{lmodern}
+% \rmfamily
+% \DeclareFontShape{T1}{lmr}{bx}{sc}{<-> cmr10}{}% USE BOLD SCSHAPE NOT OTHERWISE DEFINED
+% %%% MATH FONT FIX
+% \DeclareFontFamily{OML}{zlmm}{}
+% \DeclareFontShape{OML}{zlmm}{m}{it}{<-> lmmi10}{}
+% \DeclareFontShape{OML}{zlmm}{b}{it}{<->ssub * zlmm/m/it}{}
+% \DeclareFontShape{OML}{zlmm}{bx}{it}{<->ssub * zlmm/m/it}{}
+% \DeclareMathVersion{Tinyb}
+% \SetSymbolFont{operators}{Tinyb}{T1}{lmr}{bx}{sc}
+% \SetSymbolFont{letters}{Tinyb}{OML}{zlmm}{m}{it}
+% \newenvironment{tinyb}{\bgroup\tiny\bfseries\scshape\mathversion{Tinyb}}{\egroup}
+
+
+
+% Paragraph Settings
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+\setlength{\parindent}{0in}
+
+
+
+% Reference Settings
+\usepackage[
+    backend=biber,
+    style=ieee,
+]{biblatex}
+\addbibresource{References.bib}
+
+% Elegantly break long doi field
+% \setcounter{biburllcpenalty}{100}
+% \setcounter{biburlucpenalty}{100}
+% \setcounter{biburlnumpenalty}{100}
+
+
+
+% Figure Settings
+\usepackage{graphicx} % Required for inserting images
+\renewcommand{\figurename}{\textbf{Fig.}}
+
+\usepackage{float}
+
+% Enable two figures in one line:
+% \usepackage{subfig}
+% \begin{figure}[htbp!]
+%   \centering
+%   \subfloat[Before re-initialization]{\includegraphics[width=0.5\textwidth]{Figures/Before re-initialization.pdf}\label{fig:f1}}
+%   \hfill
+%   \subfloat[After re-initialization]{\includegraphics[width=0.5\textwidth]{Figures/After re-initialization.pdf}\label{fig:f2}}
+%   \centering
+%   \caption{Swarm distribution before and after reinitializing transitional particles on a one-dimensional problem}
+%   \label{fig:before_and_after_reinitialization}
+% \end{figure}
+
+
+
+% Array Settings
+\usepackage{array}
+\newcolumntype{R}{>{$}r<{$}} % math-mode version of "r" column type
+\newcolumntype{C}{>{$}c<{$}} % math-mode version of "c" column type
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+% defines a new type of column called Y based on a X column (this column type is defined by the tabularx package and it is basically a p{ <width>} column, where <width> is calculated by the package) but typesets the content using \small font size and with ragged-right text.
+% \newcolumntype{Y}{>{\small\raggedright\arraybackslash}X}
+
+% Modify the space on the bottom and top of each cell:
+\usepackage{cellspace}
+% \addtolength{\cellspacetoplimit}{5pt}
+% \addtolength{\cellspacebottomlimit}{5pt}
+
+\usepackage{multirow}
+\usepackage{tabularx,booktabs}
+\usepackage{longtable}
+\usepackage{relsize}
+
+% \renewcommand{\thetable}{S\arabic{table}}  % Rename the table names to Table Sx.
+
+% Equally spread columns to fulfill the whole table.
+% \begin{longtable}[c]{@{\extracolsep{\fill}}Lllllllll}
+
+% Define a horizontal line that only appears in specific columns:
+% \usepackage{hhline}
+% \hhline{~----~~}  % Use as \hline, but the column with ~ will not have a horizontal line.
+
+
+
+% Hyper-reference Settings
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    citecolor=cyan,
+    urlcolor=cyan,
+}
+% \usepackage[all]{hypcap} 
+% \makeatletter
+% \AtBeginDocument{\def\@citecolor{cyan}}  % Define citing 
+% \AtBeginDocument{\def\@urlcolor{cyan}}
+% \AtBeginDocument{\def\@linkcolor{cyan}}
+% \makeatother
+
+% Make the brackets of equation citation blue:
+% \hyperref[eq:clpso_velocity]{(\ref*{eq:clpso_velocity})}
+
+
+
+% Mathematical Settings 
+\usepackage{mathtools}
+\usepackage{amssymb,mathrsfs}  % Typical maths resource packages
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{nccmath}  % To narrow parskip between two equations. \useshortskip
+
+
+
+% Equation Settings
+% \counterwithout{equation}{chapter}
+
+% To use the large bracket on one side of equation:
+% \begin{equation}
+%     \label{eq:sum}
+%     Sum = 
+%     \begin{cases}
+%        Y_1 + Y_2 + Y_3, & \theta = 3 \\
+%        Y_1 + Y_2 + \cdots + Y_8, & \theta = 8
+%     \end{cases}
+% \end{equation}
+
+
+
+% Algorithm Settings
+\usepackage{algorithmic}
+% \usepackage{algpseudocodex}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+% Enumerate Settings
+% \usepackage{enumitem}
+% \begin{enumerate}[label={(\arabic*).}]
+%     \item XXX
+%     \item XXX
+% \end{enumerate}
+
+
+% Line Number Settings
+\usepackage{lineno}
+% \linenumbers  % Uncomment this line to turn on the line number settings
+
+
+
+% Code Settings
+% \usepackage{courier}
+% \usepackage{minted}
+
+
+% Subfile Settings
+% \usepackage{subfiles}
+% \providecommand{\topdir}{.}
+% \addglobalbib{\topdir/References.bib}
+
+
+
+% Attach File Settings
+\usepackage{attachfile}
+% \attachfile[icon=Paperclip]{Test.pdf}
+
+
+
+% Additional Settings
+
+% Define a checkbox:
+% \newcommand{\checkbox}[1]{%
+%   \ifnum#1=1
+%     \makebox[0pt][l]{\raisebox{0.15ex}{\hspace{0.1em}$\checkmark$}}%
+%   \fi
+%   $\square$%
+% }
