@@ -1,6 +1,8 @@
 # 2024_NTU_EE6483_Cheat_Sheet
 
-__You can directly find the PDF file here: [Cheatsheet](./2024_NTU_EE6483_Cheat_Sheet.pdf).__
+[2024/12/1]
+
+__You can find the original PDF file here: [Cheatsheet](./2024_NTU_EE6483_Cheat_Sheet.pdf).__ It is expected that there will be further updates. 
 
 It was inspired by this [2023_NTU_EE7401_Cheat_Sheet](https://github.com/JiangpengLI86/2023_NTU_EE7401_Cheat_Sheet).
 
