@@ -12,3 +12,5 @@ The cheat sheet may have some mistakes, so check carefully when you use it. I ap
 
 __If you find it useful, a star will be fine.__
 
+## License
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
