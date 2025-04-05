@@ -1,6 +1,6 @@
 # 2024_NTU_EE6483_Cheat_Sheet
 
-__If you find it useful, a star will be good.__
+__If you find it useful, a star🌟 will be good.__
 
 ---
 __[2025/4/5]__
