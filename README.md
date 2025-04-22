@@ -1,6 +1,12 @@
 # 2024_NTU_EE6483_Cheat_Sheet
 
-__If you find it useful, a star🌟 will be good.__
+__If you find it useful, a star🌟 will be very good of you❤️.__
+
+---
+
+__[2024/4/23]__
+
+Add the __[EE6497 Cheasheet](./ee6497.pdf)__. It's the first edition, might be some mistakes. 
 
 ---
 __[2025/4/5]__
