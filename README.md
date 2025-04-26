@@ -17,7 +17,7 @@ Update the __[dog&cat](./dog&cat/)__ final project, source code and results.
 
 __[2024/12/1]__
 
-__You can find the original PDF file here: [Cheatsheet](./2024_NTU_EE6483_Cheat_Sheet.pdf).__ It is expected that there will be further updates. 
+__You can find the original PDF file here: [Cheatsheet](./ee6483.pdf).__ It is expected that there will be further updates. 
 
 It was inspired by this [2023_NTU_EE7401_Cheat_Sheet](https://github.com/JiangpengLI86/2023_NTU_EE7401_Cheat_Sheet).
 
