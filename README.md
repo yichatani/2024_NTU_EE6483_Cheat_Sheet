@@ -4,6 +4,12 @@ __If you find it useful, a star🌟 will be very good of you❤️.__
 
 ---
 
+__[2024/4/27]__
+
+Update the __[EE6497 Cheasheet](./ee6497.pdf)__. It's a complete version now. 
+
+---
+
 __[2024/4/23]__
 
 Add the __[EE6497 Cheasheet](./ee6497.pdf)__. It's the first edition, might be some mistakes. 
