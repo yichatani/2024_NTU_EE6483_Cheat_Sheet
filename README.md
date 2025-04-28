@@ -29,7 +29,7 @@ It was inspired by this [2023_NTU_EE7401_Cheat_Sheet](https://github.com/Jiangpe
 
 This cheat sheet is valid only when EE6483's exam is Restricted Open Book.
 
-The cheat sheet may have some mistakes, so check carefully when you use it. I apreciate it if you find some errors and edit and commit them in [main.tex](./main.tex).
+The cheat sheet may have some mistakes, so check carefully when you use it. I apreciate it if you find some errors and edit and commit them in [main.tex](./ee6483.tex).
 
 ---
 
