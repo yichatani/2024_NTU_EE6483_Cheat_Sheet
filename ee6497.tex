@@ -6,6 +6,8 @@
 \usepackage{color}
 \usepackage{amsmath, amssymb,amsfonts, listings}
 \usepackage{bbm}
+\usepackage{listings}
+\usepackage{courier}
 \usepackage{enumitem}
 \setlength{\columnsep}{0.2cm}
 \setlength{\columnseprule}{1pt}
@@ -36,15 +38,15 @@
 
 % \includegraphics[scale=0.3]{images/breadth-first.png}
 
-\bulletPoint{Famous Pdfs}:\quad
+% \bulletPoint{Famous Pdfs}:\quad
 
-$\text{Bern}(x | \theta) = \theta^x (1 - \theta)^{1-x}=\theta^{\mathbbm{1}\{x=1\}} (1 - \theta)^{\mathbbm{1}\{x=0\}}$.
-$\text{Unif}(x | a, b) = \frac{1}{b-a}  \mathbbm{1}\{a \leq x \leq b\}$.\quad
-$\text{Exp}(x | \lambda) = \lambda e^{-\lambda x} \mathbbm{1}\{x \geq 0\}$.
-$\text{Bin}(x | n, \theta) = \binom{n}{x} \theta^x (1 - \theta)^{n-x}$
-where $\binom{n}{x} = \frac{n!}{x!(n-x)!}$.
-$\text{Beta}(\theta | a, b) = \frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} \theta^{a-1} (1-\theta)^{b-1}$.
-$\Gamma(x) = \int_0^\infty t^{x-1} e^{-t} dt$ for $x \in \mathbb{R}$.
+% $\text{Bern}(x | \theta) = \theta^x (1 - \theta)^{1-x}=\theta^{\mathbbm{1}\{x=1\}} (1 - \theta)^{\mathbbm{1}\{x=0\}}$.
+% $\text{Unif}(x | a, b) = \frac{1}{b-a}  \mathbbm{1}\{a \leq x \leq b\}$.\quad
+% $\text{Exp}(x | \lambda) = \lambda e^{-\lambda x} \mathbbm{1}\{x \geq 0\}$.
+% $\text{Bin}(x | n, \theta) = \binom{n}{x} \theta^x (1 - \theta)^{n-x}$
+% where $\binom{n}{x} = \frac{n!}{x!(n-x)!}$.
+% $\text{Beta}(\theta | a, b) = \frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} \theta^{a-1} (1-\theta)^{b-1}$.
+% $\Gamma(x) = \int_0^\infty t^{x-1} e^{-t} dt$ for $x \in \mathbb{R}$.
 
 \bulletPoint{Probability Basics}:
 
@@ -92,16 +94,16 @@ $\frac{\partial (\mathbf{a}^\top \mathbf{X}^{-1} \mathbf{b})}{\partial \mathbf{X
 
 \end{itemize}
 % \textbf{Parametric vs. Non-Parametric Models}
-\bulletPoint{Parametric vs. Non-Parametric Models}
+% \bulletPoint{Parametric vs. Non-Parametric Models}
 
-\begin{itemize}[leftmargin=0pt]
-\item • A parametric model assumes a fixed number of parameters. It usually belongs to a predefined family of distributions: 
-\( p(x,y) = p(x,y \mid \theta) \) or \( p(x) = p(x \mid \theta) \). \\
- 1. Faster to train (find “optimal” \( \theta \)). 2. Stronger assumptions about the data distribution. 
-\item • A non-parametric model the number of parameters grows with the amount of training data:
-  1. More flexible.
-  2. Can be computationally intractable for large datasets.
-\end{itemize}
+% \begin{itemize}[leftmargin=0pt]
+% \item • A parametric model assumes a fixed number of parameters. It usually belongs to a predefined family of distributions: 
+% \( p(x,y) = p(x,y \mid \theta) \) or \( p(x) = p(x \mid \theta) \). \\
+%  1. Faster to train (find “optimal” \( \theta \)). 2. Stronger assumptions about the data distribution. 
+% \item • A non-parametric model the number of parameters grows with the amount of training data:
+%   1. More flexible.
+%   2. Can be computationally intractable for large datasets.
+% \end{itemize}
 
 \bulletPoint{Bayesian Inference:} \quad
 
@@ -323,8 +325,7 @@ $L^{(0)} = \frac{1}{n} \sum_{i=1}^{n} \log \left( \sum_{k=1}^{K} \pi^{(0)}(k) \m
 
 \bulletPoint{K-Means Algorithm}\quad
 
-GMM with $\Sigma_k = \sigma^2 I$ and $\pi(k) = 1/K$ are fixed. Only $\mu_k$ are inferred. 
-
+GMM with $\Sigma_k = \sigma^2 I$ and $\pi(k) = 1/K$ are fixed. Only $\mu_k$ are inferred. \quad
 1. \textbf{E-step:} Assign each $x_i$ to its nearest cluster center: $k_i = \arg\min_{k} \|x_i - \mu_k^{(m)}\|^2$. Define hard assignment: $r_{ik}^{(m)} = 1$ if $k = k_i$, otherwise $r_{ik}^{(m)} = 0$. 
 
 $Q(\theta \mid \theta^{(m)}) = -\frac{1}{2\sigma^2} \sum_{i=1}^{n} \|x_i - \mu_{k_i}^{(m)}\|^2 + \text{const}$. 
@@ -348,10 +349,10 @@ Given data $\mathbf{x}$, the posterior is $p(\theta \mid \mathbf{x}) = \frac{p(\
 4. Repeat until convergence. 
 
     
-\bulletPoint{Markov Chains}\quad
+% \bulletPoint{Markov Chains}\quad
 
-A discrete-time sequence $\mathbf{x} = \{x[0], x[1], \dots\}$, where each $x[t] \in \{1, 2, \dots, M\}$, satisfies the Markov property:
-$p(x[t] \mid x[1], \dots, x[t-1]) = p(x[t] \mid x[t-1])$
+% A discrete-time sequence $\mathbf{x} = \{x[0], x[1], \dots\}$, where each $x[t] \in \{1, 2, \dots, M\}$, satisfies the Markov property:
+% $p(x[t] \mid x[1], \dots, x[t-1]) = p(x[t] \mid x[t-1])$
 
 \bulletPoint{Transition Matrix}\quad
 
@@ -394,15 +395,14 @@ Applications:
 1. Initialize $\theta^{(0)}$.
 
 2. \textbf{E step}: Use Forward-Backward Algorithm to compute
-    $\gamma_{i,t}(z) = p(z_i[t] = z | \mathbf{x}_i[0:t_i], \theta^{(m)}) \propto \alpha_j(z) \beta_j(z)$, 
-    $\xi_{i,t}(z,z') = p(z_i[t-1] = z, z_i[t] = z' | \mathbf{x}_i[0:t_i], \theta^{(m)})$, 
+    $\gamma_{i,t}(z) = p(z_i[t] = z | \mathbf{x}_i[0:t_i], \theta^{(m)}) \propto \alpha_j(z) \beta_j(z)$. 
+    $\xi_{i,t}(z,z') = p(z_i[t-1] = z, z_i[t] = z' | \mathbf{x}_i[0:t_i], \theta^{(m)})$
     $\quad \propto \alpha_{t-1}(z) p(\mathbf{x}_i[t] | z_i[t]=z') \beta_t(z') p(z_i[t] = z' | z_i[t-1] = z)$. 
 
 3. \textbf{M step}: Update parameters
     $\hat{\pi}(z) = \frac{\sum_{i=1}^{n} \gamma_{i,0}(z)}{n}$, 
     $\hat{T}(z,z') = \frac{\sum_{i=1}^{n} \sum_{t=1}^{t_i} \xi_{i,t}(z,z')}{\sum_u \sum_{i=1}^{n} \sum_{t=1}^{t_i} \xi_{i,t}(z,u)}$, 
-    $\hat{\phi}_z$ = emission probability parameters.
-
+    $\hat{\phi}_z$ = emission probability parameters. \quad
 4. Repeat E and M steps.
   
 \bulletPoint{Inference in HMMs}\quad
@@ -470,8 +470,7 @@ $\mathbb{E}_p[f(z)] \approx \sum_{i=1}^n w_n(z_i)f(z_i)$, $w_n(z_i) = \frac{w(z_
 
 \bulletPoint{Sampling Importance Resampling (SIR)}\quad
 
-• Convert importance weighted samples into unweighted samples from $p(z)$. 
-
+• Convert importance weighted samples into unweighted samples from $p(z)$. \quad
 • \textbf{Steps:}
 
 1. Sample $z_1,\dots,z_n$ from $q(z)$. 
@@ -543,8 +542,7 @@ Choose transition probability $q(\mathbf{x}, \mathbf{y})$ that is irreducible, a
 
 • Let $Z_0, Z_1, \dots$ be the chain states. At step $m$:
 
-1. Let $\mathbf{x} = Z_{m-1}$.  
-
+1. Let $\mathbf{x} = Z_{m-1}$. \quad 
 2. Sample $\mathbf{y} \sim q(\mathbf{x}, \cdot)$.   
 
 3. Accept $\mathbf{y}$ with probability  
@@ -591,7 +589,6 @@ $A(\mathbf{x}, \mathbf{y}) = \min\left(1, \frac{\tilde{\pi}(\mathbf{y})q(\mathbf
 
 
 \bulletPoint{Proposal Variance} \quad
-
 • Important to tune proposal variance $\sigma$. \quad
 
 • $\sigma$ too small → slow convergence, high acceptance rate, takes a long time to explore the whole space. 
@@ -603,12 +600,10 @@ $A(\mathbf{x}, \mathbf{y}) = \min\left(1, \frac{\tilde{\pi}(\mathbf{y})q(\mathbf
 (2) Independence chain MH: acceptance rate close to 1
 
 \bulletPoint{Burn-In} \quad
-
 Discard early samples before chain reaches stationary distribution. 
 Hard to know when. E.g. $x_0 \sim \text{Unif}(\{0,1,\dots,20\})$, takes over 400 steps to "forget" initial state.
 
 \bulletPoint{Thinning}\quad
-
 Break dependencies between samples by taking every $d$-th sample. 
 Useful when $\sigma$ is too large → MC stuck for long time at same location. 
 Subsample every $d$ samples: $z_0, z_d, z_{2d}, \dots$
@@ -647,7 +642,6 @@ $p(z_1 \mid z_2, \dots, z_d) = \frac{p(z_1, \dots, z_d)}{p(z_2, \dots, z_d)}$
 
 
 \bulletPoint{Introduction to NN and DL} \quad
-
 • An artificial neuron computes $y = f\left(\sum_{j=0}^{m} w_j x_j\right)$ with $x_0 = 1$, $w_0 = b$. \quad
 Common activations: sigmoid $f(x) = \frac{1}{1 + e^{-x}}$, ReLU $f(x) = \max(0, x)$. 
 
@@ -784,14 +778,12 @@ Approaches: step decay, exponential/cosine decay, reduce by constant, warmup(inc
 • Early stopping: monitor validation loss, stop if no improvement after $n$ epochs.
 
 \bulletPoint{Batch Normalization} \quad
-
 • Normalize each mini-batch: $\hat{x} = \frac{x - \mu}{\sigma}$ \quad
 
 • Less dependent on initialization. Normalizes activations. Reduces vanishing/exploding gradients. Reduces internal covariate shift.
 Stabilizes training, enables higher learning rates. Common in CNNs.
 
 \bulletPoint{Hyperparameter Tuning} \quad
-
 • layer size, lr(schedule), optimizer, regularization, batch size, activation, loss f. \quad
 
 • Methods: grid search(check all with step), random search, Bayesian optimization. Use k-fold cross-validation if data is limited.
@@ -801,7 +793,6 @@ MLPs are not translation invariant: shifting the input changes the output drasti
 
 \bulletPoint{Convolution Operation} \quad
 • 1D: Convolution flips and slides a kernel $w$ over input $x$,
-
 $(x * w)[n] = \sum_{k=-\infty}^{\infty} x[k] w[n-k]$
 
 $x = [1, 2, 3, 4]$, $w = [5, 6, 7]$→$z = [5, 16, 34, 52, 45, 28]$
@@ -809,10 +800,10 @@ $x = [1, 2, 3, 4]$, $w = [5, 6, 7]$→$z = [5, 16, 34, 52, 45, 28]$
 • 2D: Apply 2D filter over 2D image by elementwise multiplication and sum. Edge detectors highlight directional features.
 
 \bulletPoint{Convolutional Neural Networks(CNNs)} \quad
-• Parameter sharing via convolution filters. \quad
-• Sparse connections via local receptive fields. \quad
-• Translation invariance. \quad
-• Fewer parameters than MLPs → faster training.
+• Parameter sharing via convolution filters. 
+• Sparse connections via local receptive fields. 
+• Translation invariance. 
+• Fewer parameters than MLPs: faster train.
 
 % CNNs use a convolutional operator for extracting data features. 
 
@@ -869,7 +860,90 @@ Zero-padding preserves spatial size. To preserve size: use padding $P = \frac{F 
 • Flatten: convert activation map to 1D before FC. \quad
 • FC: standard dense layer connects to all inputs.
 
-\bulletPoint{Blank area for Appendix Notes}
+% \bulletPoint{Code}
+
+\lstset{
+  basicstyle=\tiny\ttfamily,
+%   numbers=left,                     
+%   numberstyle=\tiny\color{gray},    
+%   numbersep=5pt,                    
+  frame=single,                     
+  breaklines=true,                  
+  columns=flexible,
+  keepspaces=true,
+  showstringspaces=false,           
+  language=Python,            
+  aboveskip=1pt,
+  belowskip=1pt,
+  lineskip=0pt,
+  xleftmargin=1em,
+  framexleftmargin=1em,
+}
+
+
+\begin{lstlisting}
+import torch
+X = torch.tensor([[0, 0], [0, 1], [1, 0], [1, 1]], dtype=torch.float)
+Y = torch.tensor([0, 1, 1, 0], dtype=int)
+network = torch.nn.Linear(2, 2)    
+loss_fn = torch.nn.CrossEntropyLoss()         
+optim   = torch.optim.SGD(network.parameters(), lr=0.1) 
+epochs  = 50                                  
+for epoch in range(epochs):
+    for x, y in zip(X, Y):
+        optim.zero_grad()                     
+        y_pred = network(x)                   
+        loss = loss_fn(y_pred, y)             
+        loss.backward()                     
+        optimizer.step()
+------------------------------------------------------------
+import numpy as np
+class NeuralNetwork:
+    def __init__(self, input_size, hidden_size, output_size, learning_rate, momentum=None):
+        self.input_size = input_size
+        self.hidden_size = hidden_size
+        self.output_size = output_size
+        self.learning_rate = learning_rate
+        self.momentum = momentum
+        self.weights_input_hidden = np.random.rand(input_size, hidden_size)
+        self.bias_hidden = np.zeros((1, hidden_size))
+        self.weights_hidden_output = np.random.rand(hidden_size, output_size)
+        self.bias_output = np.zeros((1, output_size))
+        if self.momentum:
+            self.velocity_input_hidden = np.zeros((input_size, hidden_size))
+            self.velocity_hidden_output = np.zeros((hidden_size, output_size))
+    def sigmoid(self, x):
+        return 1 / (1 + np.exp(-x))
+    def sigmoid_derivative(self, x):
+        return x * (1 - x)
+    def forward_pass(self, X):
+        self.hidden_output = self.sigmoid(np.dot(X, self.weights_input_hidden) + self.bias_hidden)
+        self.output = self.sigmoid(np.dot(self.hidden_output, self.weights_hidden_output) + self.bias_output)
+        return self.output
+    def backward_pass(self, X, y, output):
+        error = y - output
+        output_delta = error * self.sigmoid_derivative(output)
+        error_hidden = output_delta.dot(self.weights_hidden_output.T)
+        hidden_delta = error_hidden * self.sigmoid_derivative(self.hidden_output)
+        if self.momentum:
+            self.velocity_input_hidden = self.momentum * self.velocity_input_hidden + X.T.dot(hidden_delta) * self.learning_rate
+            self.velocity_hidden_output = self.momentum * self.velocity_hidden_output + self.hidden_output.T.dot(output_delta) * self.learning_rate
+            self.weights_input_hidden += self.velocity_input_hidden
+            self.weights_hidden_output += self.velocity_hidden_output
+        else:
+            self.weights_hidden_output += self.hidden_output.T.dot(output_delta) * self.learning_rate
+            self.weights_input_hidden += X.T.dot(hidden_delta) * self.learning_rate
+        self.bias_output += np.sum(output_delta, axis=0, keepdims=True) * self.learning_rate
+        self.bias_hidden += np.sum(hidden_delta, axis=0, keepdims=True) * self.learning_rate
+    def train(self, X, y, epochs):
+        for epoch in range(epochs):
+            output = self.forward_pass(X)
+            self.backward_pass(X, y, output)
+            if epoch % 1000 == 0:
+                loss = np.mean(np.square(y - output))
+                print(f'Epoch {epoch}, Loss: {loss:.4f}')
+\end{lstlisting}
+
 
 
 

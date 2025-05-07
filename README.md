@@ -4,6 +4,12 @@ __If you find it useful, a star🌟 will be very good of you❤️.__
 
 ---
 
+__[2025/5/8]__
+
+Add code block in the __[EE6497 Cheatsheet](./ee6497.pdf)__. Thanks to wlp😑. 
+
+---
+
 __[2025/4/27]__
 
 Update the __[EE6497 Cheatsheet](./ee6497.pdf)__. It's a complete version now. 
